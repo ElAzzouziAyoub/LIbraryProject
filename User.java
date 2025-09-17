@@ -43,6 +43,15 @@ public abstract class User {
     public int getAge(){
         return this.age;
     }
+    public ArrayList<Book> getLoans(){
+        return this.Loans;
+    }
+    public void setAbleToLoan(boolean AbleToLoan){
+        this.AbleToLoan = AbleToLoan;
+    }
+    public String getProfile(){
+        return this.Profile;
+    }
     public void displayInfo(){
         System.out.println("ID: " + this.UserID);
         System.out.println("FirstName: " + this.FirstName);
