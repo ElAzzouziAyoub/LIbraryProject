@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class User {
+public abstract class User {
     private int UserID;
     private String FirstName;
     private String LastName;
@@ -8,6 +8,14 @@ public class User {
     private ArrayList<Book> Loans;
     private String Profile;
     private boolean AbleToLoan;
+
+    User(int UserID , String FirstName , String LastName , int age , String Profile){
+        this.UserID = UserID;
+        this.FirstName=FirstName;
+        this.LastName = LastName;
+        this.age = age;
+        this.Profile = Profile;
+    }
 
     public int getID(){
         return this.UserID;
@@ -33,6 +41,8 @@ public class User {
     public int getAge(){
         return this.age;
     }
+
+    public abstract void displayInfo();
 
 
 
