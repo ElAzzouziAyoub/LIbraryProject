@@ -5,9 +5,9 @@ public abstract class User {
     private String FirstName;
     private String LastName;
     private int age;
-    private ArrayList<Book> Loans;
+    private ArrayList<Book> Loans =  new ArrayList<>();
     private String Profile;
-    private boolean AbleToLoan;
+    private boolean AbleToLoan = false;
 
 
     public User(int UserID, String FirstName, String LastName, int age, String Profile) {
@@ -52,6 +52,7 @@ public abstract class User {
     public String getProfile(){
         return this.Profile;
     }
+
     public void displayInfo(){
         System.out.println("ID: " + this.UserID);
         System.out.println("FirstName: " + this.FirstName);

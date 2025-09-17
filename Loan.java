@@ -18,13 +18,22 @@ public class Loan {
         return book;
     }
 
-    public void loan(User user, Book book) {
-        user.getLoans().add(book);
-        user.setAbleToLoan(true);
 
+    public static void loan(User user, Book book) {
+        if (book.getisAvailable()) {
+            user.getLoans().add(book);
+            user.setAbleToLoan(false);
+            book.setisAvailable(false);
+            System.out.println(user.getFirstName() + user.getLastName() + " loaned " + book.getTitle());
+        }
+        else {
+            System.out.println("Book is not available");
+        }
     }
-    public void returnBook(Book book) {
+    public static void returnBook(User user, Book book) {
         user.getLoans().remove(book);
-        user.setAbleToLoan(false);
+        user.setAbleToLoan(true);
+        book.setisAvailable(true);
+        System.out.println(user.getFirstName() + user.getLastName() + " returned " + book.getTitle());
     }
 }
