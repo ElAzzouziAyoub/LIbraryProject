@@ -9,14 +9,23 @@ public abstract class User {
     private String Profile;
     private boolean AbleToLoan;
 
+<<<<<<< HEAD
     User(int UserID , String FirstName , String LastName , int age , String Profile){
         this.UserID = UserID;
         this.FirstName=FirstName;
+=======
+    public User(int UserID, String FirstName, String LastName, int age, String Profile) {
+        this.UserID = UserID;
+        this.FirstName = FirstName;
+>>>>>>> Haytam
         this.LastName = LastName;
         this.age = age;
         this.Profile = Profile;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> Haytam
     public int getID(){
         return this.UserID;
     }
@@ -41,9 +50,19 @@ public abstract class User {
     public int getAge(){
         return this.age;
     }
+    public void displayInfo(){
+        System.out.println("ID: " + this.UserID);
+        System.out.println("FirstName: " + this.FirstName);
+        System.out.println("LastName: " + this.LastName);
+        System.out.println("Age: " + this.age);
+        System.out.println("Profile: " + this.Profile);
 
+<<<<<<< HEAD
     public abstract void displayInfo();
 
+=======
+    }
+>>>>>>> Haytam
 
 
 }
