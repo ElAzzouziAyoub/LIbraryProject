@@ -1,2 +1,39 @@
+import java.util.ArrayList;
+
 public class User {
+    private int UserID;
+    private String FirstName;
+    private String LastName;
+    private int age;
+    private ArrayList<Book> Loans;
+    private String Profile;
+    private boolean AbleToLoan;
+
+    public int getID(){
+        return this.UserID;
+    }
+
+    public void setFirstName(String FirstName){
+        this.FirstName = FirstName;
+    }
+    public String getFirstName(){
+        return this.FirstName;
+    }
+
+    public void setLastName(String LastName){
+        this.LastName = LastName;
+    }
+    public String getLastName(){
+        return this.LastName;
+    }
+
+    public void setAge(int age){
+        this.age = age;
+    }
+    public int getAge(){
+        return this.age;
+    }
+
+
+
 }
